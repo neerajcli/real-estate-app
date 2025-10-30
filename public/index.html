@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real Estate Management</title>
+  <link rel="stylesheet" href="/index.css" />
+</head>
+
+<body>
+  <header class="container">
+    <div class="row" style="justify-content: space-between; align-items: center;">
+      <div>
+        <h1>Real Estate</h1>
+        <p>Browse properties and schedule a visit with the owner.</p>
+      </div>
+      <div class="row" style="gap:.5rem">
+        <a class="pill" href="/home.html">Home</a>
+        <a class="pill" href="/login.html">Login</a>
+        <a class="pill" href="/signup.html">Sign Up</a>
+        <a class="pill" href="/owner.html">Owner Dashboard</a>
+        <a class="pill" href="/buyer.html">Buyer Dashboard</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="container filters">
+    <div class="filter">
+      <label for="city">City</label>
+      <input type="text" id="city" placeholder="e.g., Pune" />
+    </div>
+    <div class="filter">
+      <label for="bedrooms">Min Bedrooms</label>
+      <input type="number" id="bedrooms" min="0" placeholder="e.g., 2" />
+    </div>
+    <div class="filter">
+      <label for="minPrice">Min Price</label>
+      <input type="number" id="minPrice" min="0" placeholder="e.g., 2000000" />
+    </div>
+    <div class="filter">
+      <label for="maxPrice">Max Price</label>
+      <input type="number" id="maxPrice" min="0" placeholder="e.g., 10000000" />
+    </div>
+    <button id="applyFilters">Apply Filters</button>
+  </section>
+
+  <main class="container">
+    <div id="properties" class="grid"></div>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close" id="closeModal">×</button>
+      <h2 id="modalTitle">Schedule Appointment</h2>
+      <form id="appointmentForm">
+        <input type="hidden" id="propertyId" />
+        <div class="input">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" required />
+        </div>
+        <div class="input">
+          <label for="email">Email</label>
+          <input type="email" id="email" required />
+        </div>
+        <div class="input">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" required />
+        </div>
+        <div class="input">
+          <label for="preferredDate">Preferred Date & Time</label>
+          <input type="datetime-local" id="preferredDate" required />
+        </div>
+        <div class="input">
+          <label for="message">Message (optional)</label>
+          <textarea id="message" rows="3" placeholder="Any note for the owner…"></textarea>
+        </div>
+        <button type="submit">Book Appointment</button>
+      </form>
+      <div id="formStatus" class="status"></div>
+    </div>
+  </div>
+
+  <script src="/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f7fb;
+  margin: 0;
+  color: #333;
+}
+
+header.container {
+  padding: 1rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header .row {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.hero {
+  margin-top: 1.8rem;
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.hero h2 {
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.hero p {
+  color: #666;
+  font-size: 1rem;
+}
+
+.pill {
+  color: black;
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-size: 1.2rem;
+}
+
+.pill:hover {
+  background: #4a90e2;
+  color: white;
+}
+
+#logout.pill {
+  background: #e85858;
+  color: white;
+}
+
+#logout.pill:hover {
+  background: #e52727;
+}
+
+.pilla {
+  color: #4a90e2;
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 1.5rem auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+.grid > div {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.grid > div:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.grid h3 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.grid p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.status-tag {
+  display: inline-block;
+  margin-top: 0.6rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  background-color: #e9f1fc;
+  color: #4a90e2;
+}
+
+button.primary {
+  display: inline-block;
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.8rem;
+  background-color: #f20606;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button.primary:hover {
+  background-color: #e63e3e;
+}
+
+button.primary:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 600px) {
+  header.container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

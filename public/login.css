@@ -1,0 +1,111 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem;
+}
+
+header h1 {
+  margin-top: 2.5rem;
+  font-size: 2rem;
+  color: #222;
+}
+
+header .muted {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.modal-content {
+  background: #fff;
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.input {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.input label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+.input input {
+  width: 92%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input input:focus {
+  border-color: #4a90e2;
+}
+
+button.primary {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button.primary:hover {
+  background-color: #357ac8;
+}
+
+button.primary:active {
+  transform: scale(0.98);
+}
+
+.status {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #e74c3c;
+}
+
+.muted {
+  color: #777;
+}
+
+.muted a {
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.muted a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+  }
+}

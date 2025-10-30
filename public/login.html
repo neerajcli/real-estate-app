@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login • Real Estate</title>
+  <link rel="stylesheet" href="/login.css" />
+</head>
+
+<body>
+  <header class="container">
+    <h1>Login</h1>
+    <p class="muted">Owners manage properties; Buyers manage their appointments.</p>
+  </header>
+  <main class="container">
+    <div class="modal-content" style="margin:auto">
+      <form id="loginForm">
+        <div class="input">
+          <label for="email">Email</label>
+          <input type="email" id="email" required />
+        </div>
+        <div class="input">
+          <label for="password">Password</label>
+          <input type="password" id="password" required />
+        </div>
+        <button type="submit" class="primary">Login</button>
+        <div id="loginStatus" class="status"></div>
+      </form>
+      <p class="muted">No account? <a href="/signup.html">Sign up</a></p>
+    </div>
+  </main>
+  <script src="login.js"></script>
+</body>
+
+</html>

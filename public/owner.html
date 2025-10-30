@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Owner Dashboard • Real Estate</title>
+  <link rel="stylesheet" href="/owner.css" />
+</head>
+
+<body>
+  <header class="container">
+    <h1><span style="color: #4a90e2">Owner Dashboard</span></h1>
+    <div class="row">
+      <a href="/" class="pill">Home</a>
+      <button id="logout" class="pill">Logout</button>
+    </div>
+  </header>
+  <main class="container">
+    <h2>Appointments</h2>
+    <div id="appts" class="grid"></div>
+    <h2>Your Properties</h2>
+    <div id="props" class="grid"></div>
+    <h3>Add Property</h3>
+    <div class="modal-content" style="margin: .5rem 0; padding: 1rem;">
+      <form id="addPropForm">
+        <div class="row" style="gap:.6rem; flex-wrap:wrap;">
+          <input placeholder="Title" id="p_title" required>
+          <input placeholder="Price" id="p_price" type="number" required>
+          <input placeholder="Address" id="p_addr" required>
+          <input placeholder="City" id="p_city" required>
+          <input placeholder="State" id="p_state" required>
+          <input placeholder="Bedrooms" id="p_bed" type="number">
+          <input placeholder="Bathrooms" id="p_bath" type="number">
+          <input placeholder="Area (sq.ft)" id="p_area" type="number">
+          <input placeholder="Image Path" id="p_img">
+        </div>
+        <div style="margin-top: 10px" class="input"><textarea id="p_desc" rows="3" placeholder="Description"></textarea>
+        </div>
+        <button class="primary" type="submit">Create Property</button>
+        <div id="propStatus" class="status"></div>
+      </form>
+    </div>
+  </main>
+  <script src="owner.js"></script>
+</body>
+
+</html>
